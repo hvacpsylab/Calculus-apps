@@ -6,6 +6,18 @@ import os
 # Correct path handling
 current_dir = os.path.dirname(__file__)
 logo_path = os.path.join(current_dir, "BITS_Logo.png")
+st.info("""
+📘 **About this learning tool**
+
+This interactive app helps you explore how the volume of a box changes 
+when squares are cut from a rectangular sheet.
+
+- Move the slider to change the cut size (x)
+- Observe how dimensions and volume change
+- Identify where the volume becomes maximum
+
+ Try different values and notice the pattern! 
+""")
 
 st.image(logo_path, width=150)
 
