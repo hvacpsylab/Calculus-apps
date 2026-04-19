@@ -3,25 +3,33 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-# Correct path handling
+# Path
 current_dir = os.path.dirname(__file__)
 logo_path = os.path.join(current_dir, "BITS_Logo.png")
+
+# 👇 HEADER
+col1, col2 = st.columns([1,4])
+
+with col1:
+    st.image(logo_path, width=100)
+
+with col2:
+    st.title("📦 Open Box Volume Explorer")
+
+# 👇 INFO BOX (comes AFTER header)
 st.info("""
 📘 **About this learning tool**
 
 This interactive app helps you explore how the volume of a box changes 
 when squares are cut from a rectangular sheet.
 
-- Move the slider to change the cut size (x)
-- Observe how dimensions and volume change
-- Identify where the volume becomes maximum
+• Move the slider to change the cut size (x)  
+• Observe how dimensions and volume change  
+• Identify where the volume becomes maximum  
 
- Try different values and notice the pattern! 
+👉 Try different values and notice the pattern!
 """)
 
-st.image(logo_path, width=150)
-
-st.title("📦 Open Box Volume Explorer")
 
 st.write("Cut squares of size x from a 14 × 22 sheet and fold into a box.")
 
